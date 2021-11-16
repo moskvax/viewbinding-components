@@ -1,12 +1,12 @@
 package com.github.moskvax.viewbinding.components
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.annotation.CallSuper
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 import kotlin.reflect.KClass
 
-abstract class ViewBindingActivity<T : ViewBinding> : ComponentActivity() {
+abstract class ViewBindingActivity<T : ViewBinding> : AppCompatActivity() {
     protected abstract val viewBindingClass: KClass<T>
     private lateinit var _binding: T
     protected val binding: T get() = _binding
